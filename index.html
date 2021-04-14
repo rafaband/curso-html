@@ -20,7 +20,7 @@
         <p>Olá Mundo!!</p>
         <p>Tudo Bem?!<br /> Como vai você?</p>
         <p><abbr title="World Wild Web">W3C</abbr></p>
-        <address>
+        <address onclick="alert('Endereço Clicado!')">
             Av. Rio Branco, 115<br />
             Rio de Janeiro - RJ - Brasil<br />
             <b>CEP:</b> 12345-678
@@ -31,5 +31,22 @@
         <blockquote cite="http://www.worldwildlife.org/who/index.html">
             For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
             </blockquote>
+
+        <button type="button" onclick="desenharBotao()">Meu Primeiro Botão</button>
+        <canvas id="desenho"></canvas>
+
+        <script>
+            function desenharBotao() {
+                var desenho = document.getElementById("desenho");
+                var ctx = desenho.getContext("2d");
+                ctx.fillStyle = "red";
+                ctx.fillRect(20, 20, 75, 50);
+                ctx.globalAlpha = 0.2;
+                ctx.fillStyle = "blue";
+                ctx.fillRect(50, 50, 75, 50);
+                ctx.fillStyle = "green";
+                ctx.fillRect(80, 80, 75, 50);
+            }
+        </script>
     </body>
 </html>
